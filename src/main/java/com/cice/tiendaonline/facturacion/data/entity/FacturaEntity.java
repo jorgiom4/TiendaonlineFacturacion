@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.List;
 
@@ -14,9 +16,10 @@ import java.util.List;
 @AllArgsConstructor
 public class FacturaEntity {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private Long idUsuario;
-    private List<ProductoEntity> productos;
     private Double importe;
     private String fecha;
 

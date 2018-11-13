@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.List;
 
 @Entity
 @Table(name = "Pedidos")
@@ -15,8 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 public class PedidoEntity {
 
+    @Id
     private Long id;
-    private List<ProductoEntity> productos;
+    private Long idUsuario;
     private Double total;
 
 }
